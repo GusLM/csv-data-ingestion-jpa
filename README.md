@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSV Data Ingestion with JPA & PostgreSQL</title>
 </head>
 <body>
 
@@ -42,7 +41,9 @@ The CSV file <code>personsList.csv</code> in the root exemplifies input data for
 ├── src/
 │   └── main/
 │       └── java/
-│           └── (your packages and Java classes)
+│           └── application
+|           └── domain.entities
+|           └── service
 ├── personsList.csv
 ├── pom.xml
 └── README.html
