@@ -50,7 +50,7 @@ The CSV file <code>personsList.csv</code> in the root exemplifies input data for
 </pre>
 
 <p>
-Fully Java-based, no frameworks like Spring Boot required — the project uses vanilla JPA + Hibernate. :contentReference[oaicite:3]{index=3}
+Fully Java-based, no frameworks like Spring Boot required — the project uses vanilla JPA + Hibernate.
 </p>
 
 <hr>
@@ -86,13 +86,13 @@ Carlos,Silva,carlos@example.com,...
 
 <hr>
 
-<h2>🛠 Key Components</h2>
+<h2>🛠 Core Features</h2>
 
 <ul>
-  <li><strong>Entity</strong>: JPA mapped <code>Person</code></li>
-  <li><strong>Utility</strong>: <code>JpaUtil</code> for managing <code>EntityManagerFactory</code></li>
-  <li><strong>Reader</strong>: CSV parser using <code>BufferedReader</code></li>
-  <li><strong>Main</strong>: Orchestrates ingestion and persistence</li>
+  <li>Reads a CSV file from local storage</li>
+  <li>Constructs a list of <code>Person</code> objects</li>
+  <li>Persists objects into a PostgreSQL database via JPA</li>
+  <li>Uses Hibernate as the JPA provider</li>
 </ul>
 
 <hr>
@@ -100,11 +100,7 @@ Carlos,Silva,carlos@example.com,...
 <h2>📌 Database Persistence</h2>
 
 <p>
-Hibernate auto-generates the schema based on your entity definitions. PostgreSQL is used as the target RDBMS — make sure the driver dependency in <code>pom.xml</code> is correct. :contentReference[oaicite:4]{index=4}
-</p>
-
-<p>
-Hibernate may generate columns in alphabetical order, but column order does not affect correctness — only names matter for mapping. <!-- explained separately earlier -->
+Hibernate auto-generates the schema based on your entity definitions. PostgreSQL is used as the target RDBMS — make sure the driver dependency in <code>pom.xml</code> is correct.
 </p>
 
 <hr>
